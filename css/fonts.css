@@ -1,0 +1,57 @@
+@CHARSET "UTF-8";
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'), url(../fonts/PT_Sans/v5/7YGmE4Ls5b94ct65u07hVQLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Bold'), local('PTSans-Bold'), url(../fonts/PT_Sans/v5/0XxGQsSc1g4rdRdjJKZrNL3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+}
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('PT Sans Italic'), local('PTSans-Italic'), url(../fonts/PT_Sans/v5/PIPMHY90P7jtyjpXuZ2cLLO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('PT Sans Bold Italic'), local('PTSans-BoldItalic'), url(../fonts/PT_Sans/v5/lILlYDvubYemzYzN7GbLkKRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Aspire DemiBold';
+	src: local('âº'), url('../fonts/Aspire-DemiBold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: 'IM Fell English';
+  font-style: normal;
+  font-weight: 400;
+  src: local('IM FELL English Roman'), local('IM_FELL_English_Roman'), url(../fonts/Sigmar_One/xwIisCqGFi8pff-oa9uSVCLHKJuu6uDU1VgRUl2Dqww.woff) format('woff');
+}
+@font-face {
+  font-family: 'IM Fell English';
+  font-style: italic;
+  font-weight: 400;
+  src: local('IM FELL English Italic'), local('IM_FELL_English_Italic'), url(../fonts/Sigmar_One/Z3cnIAI_L3XTRfz4JuZKbp3BpQU8opE6p3S8I9UDCT8.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(../fonts/Sigmar_One/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(../fonts/Sigmar_One/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}

@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+
+.frontside {
+	-webkit-transform: rotateY(0deg);
+	   -moz-transform: rotateY(0deg);
+	     -o-transform: rotateY(0deg);
+	        transform: rotateY(0deg);
+	-webkit-transform-style:preserve-3d;
+}
+
+.backside {
+	-webkit-transform: rotateY(180deg);
+	   -moz-transform: rotateY(180deg);
+	     -o-transform: rotateY(180deg);
+	        transform: rotateY(180deg);
+	-webkit-transform-style:preserve-3d;
+}
+
+.sideview {
+	-webkit-transform: rotateY(90deg);
+	   -moz-transform: rotateY(90deg);
+	     -o-transform: rotateY(90deg);
+	        transform: rotateY(90deg);
+	-webkit-transform-style:preserve-3d;
+}
+
+.backface {
+	-webkit-backface-visibility: visible;
+	   -moz-backface-visibility: visible;
+	     -o-backface-visibility: visible;
+	        backface-visibility: visible;
+}
+
+.nobackface {
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+	     -o-backface-visibility: hidden;
+	        backface-visibility: hidden;
+}

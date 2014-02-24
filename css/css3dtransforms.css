@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+
+.perspective {
+	-webkit-perspective: 400px;
+	   -moz-perspective: 400px;
+	     -o-perspective: 400px;
+	        perspective: 400px;
+}        
+
+.noperspective {
+	-webkit-perspective: 0px;
+	   -moz-perspective: 0px;
+	     -o-perspective: 0px;
+	        perspective: 0px;
+}
+

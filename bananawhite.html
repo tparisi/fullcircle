@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href='./css/fonts.css' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="./css/css3dperspective.css" />
+<link rel="stylesheet" href="./css/css3dbackfaces.css" />
+<link rel="stylesheet" href="./css/css3danimations.css" />
+<title>Banana - White</title>
+<script src="./libs/jquery-1.9.1/jquery-1.9.1.js"></script>
+<script src="./libs/vizi/vizi.js" ></script>
+<style>
+body {
+	/*background-color:#fdf5e8; /*duron paperwhite*/
+	/*background-color:black;*/
+}
+
+* {
+	font-family: 'PT Sans', sans-serif;
+	/*color:#fdf5e8; /*duron paperwhite*/
+}
+
+#main {
+/*	-webkit-transform:rotateY(-40deg); */
+	-webkit-perspective: 400px;
+	-webkit-transform-style:preserve-3d;
+	left:200px;
+	width:620px;
+	height:620px;
+	position:absolute;
+}
+
+#label {
+	font-family: 'IM Fell English', sans-serif;
+	left:0px;
+	top:120px;
+	width:280px;
+	font-size:36px;
+	font-weight:bold;
+	text-align:right;
+	position:absolute;
+	border:0px dotted;
+}
+
+#signature {
+	font-family: 'Aspire Demibold', sans-serif;
+	left:440px;
+	top:480px;
+	font-size:48px;
+	font-weight:bold;
+	position:absolute;
+}
+
+#container {
+	background-color:white;
+	border:0px dotted gray;
+	left:80px;
+	top:60px;
+	width:500px;
+	height:600px;
+	z-index:-1;
+	position:absolute;
+}
+
+</style>
+
+<script>
+
+	var viewer = null;
+	$(document).ready(function() {
+
+		var container = document.getElementById("container");
+		viewer = new Vizi.Viewer({ container : container });
+		
+		var loader = new Vizi.Loader;
+		loader.addEventListener("loaded", function(data) { onLoadComplete(data); }); 
+
+		viewer.run();
+
+		loader.loadScene("./models/banananew/Banana.js");
+		//return;
+		
+		var listener = function(event) {
+			$('#main').addClass('animRotateY');
+			setTimeout(function(){
+				$('#main').removeClass('sideview');
+				
+			}, 1000);
+
+			document.removeEventListener(listener);
+		}
+		
+		document.addEventListener("click", listener);
+
+		$(window).unload(function() { 
+			console.log("in unload callback..."); 
+		});
+	}
+	);
+
+function onLoadComplete(data) {
+	var scene = data.scene;
+	scene.transform.rotation.y = Math.PI / 2 ;
+	scene.transform.rotation.z = -Math.PI / 6 ;
+	scene.transform.rotation.x = -Math.PI / 2 ;
+
+	var obj = new Vizi.Object;
+	obj.transform.rotation.z = -Math.PI / 4;
+	obj.addChild(scene);
+
+	var picker = new Vizi.Picker({overCursor:'pointer'});
+	picker.addEventListener("click", function(event) { window.open("http://www.w3c.org"); });
+	obj.addComponent(picker);
+	
+	viewer.controllerScript.camera.position.z *= 10;
+	viewer.replaceScene({ scene : obj });
+
+}
+</script>
+</head>
+<body>
+<div id="main" class="sideview perspective nobackface">
+<div id="label">
+THE VIRTUAL REALITY MARKUP LANGUAGE
+</div>
+<div id="signature">
+Tony Parisi<br>Mark Pesce
+</div>
+<div id="container">
+</div>
+</div>
+</body>
+</html>
