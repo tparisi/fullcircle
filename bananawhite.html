@@ -32,7 +32,7 @@ body {
 
 #label {
 	font-family: 'IM Fell English', sans-serif;
-	left:0px;
+	left:20px;
 	top:120px;
 	width:280px;
 	font-size:36px;
@@ -40,6 +40,23 @@ body {
 	text-align:right;
 	position:absolute;
 	border:0px dotted;
+}
+
+#vrml20 {
+	font-family: 'IM Fell English', sans-serif;
+	left:60px;
+	top:560px;
+	width:280px;
+	font-size:16px;
+	font-weight:bold;
+	font-style:italic;
+	position:absolute;
+	border:0px dotted;
+}
+
+#vrml20 a:link,a:active,a:visited {
+	text-decoration: none;
+	color:#2f2f2f;
 }
 
 #signature {
@@ -78,9 +95,8 @@ body {
 		viewer.run();
 
 		loader.loadScene("./models/banananew/Banana.js");
-		//return;
 		
-		var listener = function(event) {
+		var flip = function(event) {
 			$('#main').addClass('animRotateY');
 			setTimeout(function(){
 				$('#main').removeClass('sideview');
@@ -90,8 +106,10 @@ body {
 			document.removeEventListener(listener);
 		}
 		
-		document.addEventListener("click", listener);
-
+		//document.addEventListener("click", flip);
+		setTimeout(function() {
+			flip();
+		}, 1000);
 	}
 	);
 
@@ -116,12 +134,15 @@ function onLoadComplete(data) {
 </script>
 </head>
 <body>
-<div id="main" class="sideview perspective nobackface">
+<div id="main" class="sideview nobackface">
 <div id="label">
 THE VIRTUAL REALITY MARKUP LANGUAGE
 </div>
 <div id="signature">
 Tony Parisi<br>Mark Pesce
+</div>
+<div id="vrml20">
+<a href="http://www.vrml20.org/" target="_blank">VRML-20</a>
 </div>
 <div id="container">
 </div>
