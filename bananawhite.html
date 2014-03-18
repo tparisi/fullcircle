@@ -95,6 +95,8 @@ body {
 		viewer.run();
 
 		loader.loadScene("./models/banananew/Banana.js");
+
+		return;
 		
 		var flip = function(event) {
 			$('#main').addClass('animRotateY');
@@ -124,7 +126,7 @@ function onLoadComplete(data) {
 	obj.addChild(scene);
 
 	var picker = new Vizi.Picker({overCursor:'pointer'});
-	picker.addEventListener("click", function(event) { window.open("http://www.w3c.org"); });
+	picker.addEventListener("click", function(event) { window.open("http://www.ro.me/"); });
 	obj.addComponent(picker);
 	
 	viewer.controllerScript.camera.position.z *= 10;
@@ -134,7 +136,7 @@ function onLoadComplete(data) {
 </script>
 </head>
 <body>
-<div id="main" class="sideview nobackface">
+<div id="main" class="nobackface">
 <div id="label">
 THE VIRTUAL REALITY MARKUP LANGUAGE
 </div>
